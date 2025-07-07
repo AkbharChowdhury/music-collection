@@ -1,9 +1,17 @@
-export const songs = [
+export type Song = {
+    readonly title: string,
+    readonly image:  string,
+    readonly artist:  string[],
+    readonly release_year:  number,
+
+};
+
+export const songs: Song[] = [
     {
         'title': 'Rockabye',
         'image': "https://cdn-images.dzcdn.net/images/cover/58b6ae3ff5e9dfc6f9e4d59862094528/1900x1900-000000-80-0-0.jpg",
         'artist': ['Clean Bandit', 'Anne-Marie'],
-        'release_year' :  2018
+        'release_year' :  2018, 
     },
 
     {
@@ -33,27 +41,3 @@ export const songs = [
     },
 
 ];
-export function showSongHtml(songs) {
-    let html = '';
-    songs.forEach(song => {
-        const artistDiv = song.artist.map(artist => `<ul class="list-group list-group-flush">
-    <li class="list-group-item">${artist}</li>
-  </ul>`).join().replaceAll(',', '');
-
-        html += `      <div class="col-sm-6 col-md-4 mt-3">
-                <div class="card" style="width: 18rem;">
-  <img src="${song.image}" class="card-img-top" alt="${song.title} by ${song.artist.join()}">
-  <div class="card-body">
-    <h5 class="card-title">${song.title}</h5>
-    <p class="card-text">${song.release_year} </p>
-  </div>
-  ${artistDiv}
- 
-</div>
-                
-    </div>
-`;
-
-    });
-    return html;
-}
