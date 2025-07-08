@@ -1,0 +1,28 @@
+{
+  "name": "music-collection",
+  "version": "1.0.0",
+  "description": "pagination of music collection",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkbharChowdhury/music-collection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkbharChowdhury/music-collection/issues"
+  },
+  "homepage": "https://github.com/AkbharChowdhury/music-collection#readme",
+  "dependencies": {
+    "epxress": "^0.0.1-security",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

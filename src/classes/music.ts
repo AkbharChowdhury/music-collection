@@ -5,7 +5,16 @@ export type Song = {
     readonly release_year:  number,
 
 };
-
+export async function fetchSongs() {
+    try {
+        const response = await fetch("public/js/json/songs.json");
+        return await response.json();
+    } catch (error) {
+        console.error(`There was and error fetching songs ${error}`)
+        
+    }
+    
+}
 export const songs: Song[] = [
     {
         'title': 'Rockabye',
